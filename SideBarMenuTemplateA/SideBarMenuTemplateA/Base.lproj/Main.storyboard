@@ -50,7 +50,7 @@
                         <barButtonItem key="leftBarButtonItem" image="line.3.horizontal" catalog="system" id="IY9-ZZ-Cvz">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="tapedSideBtn:" destination="BYZ-38-t0r" id="8Q3-Z3-kec"/>
+                                <action selector="tapedSideBtn:" destination="BYZ-38-t0r" id="wms-wJ-iaD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,28 +82,55 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Side Container View-->
         <scene sceneID="Rtq-w2-oDy">
             <objects>
-                <viewController id="wR0-mr-Fr3" sceneMemberID="viewController">
+                <viewController id="wR0-mr-Fr3" customClass="SideContainerView" customModule="SideBarMenuTemplateA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YaW-Q2-kGV">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yg8-87-oLf">
-                                <rect key="frame" x="16" y="44" width="168" height="730"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="bcO-gf-1f5" style="IBUITableViewCellStyleDefault" id="dFq-db-gqD">
+                                        <rect key="frame" x="0.0" y="44.5" width="200" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dFq-db-gqD" id="Opx-sq-IJy">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bcO-gf-1f5">
+                                                    <rect key="frame" x="16" y="0.0" width="168" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wR0-mr-Fr3" id="nkF-sB-N4a"/>
+                                    <outlet property="delegate" destination="wR0-mr-Fr3" id="wOv-Xv-E3G"/>
+                                </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="xT7-d0-ek2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Yg8-87-oLf" firstAttribute="top" secondItem="YaW-Q2-kGV" secondAttribute="topMargin" id="T8T-6r-x5o"/>
-                            <constraint firstItem="Yg8-87-oLf" firstAttribute="leading" secondItem="YaW-Q2-kGV" secondAttribute="leadingMargin" id="gQv-hq-zuX"/>
+                            <constraint firstItem="Yg8-87-oLf" firstAttribute="top" secondItem="YaW-Q2-kGV" secondAttribute="top" id="T8T-6r-x5o"/>
+                            <constraint firstItem="Yg8-87-oLf" firstAttribute="left" secondItem="YaW-Q2-kGV" secondAttribute="left" id="gQv-hq-zuX"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Yg8-87-oLf" secondAttribute="bottom" id="qEW-SZ-CMI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yg8-87-oLf" secondAttribute="trailing" id="zln-Uk-FtW"/>
+                            <constraint firstAttribute="right" secondItem="Yg8-87-oLf" secondAttribute="right" id="zln-Uk-FtW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sideTableView" destination="Yg8-87-oLf" id="80P-Tm-prn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm4-xM-qVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

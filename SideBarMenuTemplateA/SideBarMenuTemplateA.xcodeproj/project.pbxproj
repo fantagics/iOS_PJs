@@ -13,6 +13,7 @@
 		B624FEF02891D15200AC9F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B624FEEE2891D15200AC9F62 /* Main.storyboard */; };
 		B624FEF22891D15300AC9F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B624FEF12891D15300AC9F62 /* Assets.xcassets */; };
 		B624FEF52891D15300AC9F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B624FEF32891D15300AC9F62 /* LaunchScreen.storyboard */; };
+		B624FF012891DC2500AC9F62 /* SideContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B624FF002891DC2500AC9F62 /* SideContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B624FEF12891D15300AC9F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B624FEF42891D15300AC9F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B624FEF62891D15300AC9F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B624FF002891DC2500AC9F62 /* SideContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B624FEF32891D15300AC9F62 /* LaunchScreen.storyboard */,
 				B624FEEE2891D15200AC9F62 /* Main.storyboard */,
 				B624FEEC2891D15200AC9F62 /* ViewController.swift */,
+				B624FF002891DC2500AC9F62 /* SideContainerView.swift */,
 			);
 			path = SideBarMenuTemplateA;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				B624FEED2891D15200AC9F62 /* ViewController.swift in Sources */,
 				B624FEE92891D15200AC9F62 /* AppDelegate.swift in Sources */,
 				B624FEEB2891D15200AC9F62 /* SceneDelegate.swift in Sources */,
+				B624FF012891DC2500AC9F62 /* SideContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
