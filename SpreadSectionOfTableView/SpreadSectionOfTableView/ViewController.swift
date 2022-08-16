@@ -25,6 +25,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tableHeader = Bundle.main.loadNibNamed("CustomTableHeader", owner: self, options: nil)?.last as? UIView
+        let tableFooter = Bundle.main.loadNibNamed("CustomTableFooter", owner: self, options: nil)?.last as? UIView
+        tableView.tableHeaderView = tableHeader
+        tableView.tableFooterView = tableFooter
+        tableView.tableHeaderView?.frame.size.height = CGFloat(80)
+        tableView.tableFooterView?.frame.size.height = CGFloat(55)
+        
         tableView.register(UINib(nibName: "CustomHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "customHeader")
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         

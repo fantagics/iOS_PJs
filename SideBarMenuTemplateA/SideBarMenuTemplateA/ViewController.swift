@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         
         sideBackView.isHidden = true
         sideBackView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:))))
+        sideBackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:))))
     }
     
     
@@ -51,6 +52,11 @@ class ViewController: UIViewController {
         default:
             break
         }
+    }
+    @objc func handleTapGesture(_ sender: UIPanGestureRecognizer){
+        self.sideLeading.constant = -sideWidth
+        self.sideBackView.isHidden = true
+        sideIsVisable = false
     }
     
     
